@@ -18,6 +18,7 @@ This website offers a comprehensive overview of the services provided by Meera B
 - **Contact Information**: Easy access to contact details including address, phone number, and email.
 - **Frequently Asked Questions (FAQs)**: A dedicated section to address common queries about services, timings, payment methods, and specific service requirements.
 - **Disclaimer**: Clear statement regarding the website's nature (private CSC, not official government) and policies on external links and advertisements.
+- **WhatsApp Floating Button**: A persistent, accessible WhatsApp button on all pages for direct communication.
 
 ## Functionalities
 
@@ -28,12 +29,14 @@ The website is designed for ease of use and accessibility, providing the followi
 - **Interactive FAQs**: An accordion-style FAQ section allows users to expand and collapse answers for better content organization.
 - **Contact Form**: A simple form for users to send messages, including fields for name, email, and message content.
 - **Smooth Animations**: Utilizes the AOS (Animate On Scroll) library to introduce elements with elegant scroll-triggered animations, enhancing visual engagement.
+- **Direct Communication**: A floating WhatsApp button provides instant access for user inquiries and support.
 
 ## System & Technologies
 
 The website is built using modern web technologies to ensure a clean, responsive, and interactive experience.
 
 -   **HTML5**: For structuring the content.
+-   **CSS (Consolidated in `style.css`)**: All custom styling, including theme variables and responsive design, is now managed in a single, external stylesheet. Duplicated inline `<style>` blocks have been removed from individual HTML files.
 -   **Tailwind CSS**: A utility-first CSS framework used for rapid UI development and responsive design.
 -   **Font Awesome**: Provides a rich library of icons used throughout the website to enhance visual communication.
 -   **AOS (Animate On Scroll) Library**: JavaScript library for animating elements as they scroll into view.
