@@ -1,2 +1,0 @@
-# MBC
-Meera Baba Communication
