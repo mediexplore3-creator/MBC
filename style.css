@@ -1,0 +1,206 @@
+:root {
+    --bg-color: #F9FAFB; /* Very light gray */
+    --text-color-primary: #1F2937; /* Deep charcoal */
+    --text-color-secondary: #4B5563; /* Medium gray */
+    --header-bg: #FFFFFF; /* Pure white */
+    --header-border: #E0E7FF; /* Light blue-gray for border */
+    --card-bg: #FFFFFF; /* Pure white */
+    --footer-bg: #1F2937; /* Dark charcoal */
+    --footer-text: #F3F4F6; /* Light gray */
+    --link-hover: #3B82F6; /* Primary accent blue */
+    --link-color: #4B5563; /* Secondary text color */
+    --accent-color: #3B82F6; /* Primary accent blue */
+    --accent-color-dark: #2563EB; /* Darker accent blue for hover/active */
+}
+
+[data-theme="dark"] {
+    --bg-color: #1F2937; /* Deep subtle dark gray */
+    --text-color-primary: #F3F4F6; /* Light soft gray */
+    --text-color-secondary: #9CA3AF; /* Medium gray */
+    --header-bg: #2D3748; /* Darker gray */
+    --header-border: #4A5568; /* Even darker gray for border */
+    --card-bg: #2D3748; /* Darker gray */
+    --footer-bg: #111827; /* Very dark gray */
+    --footer-text: #E5E7EB; /* Lighter gray */
+    --link-hover: #60A5FA; /* Vibrant lighter blue */
+    --link-color: #9CA3AF; /* Medium gray */
+    --accent-color: #60A5FA; /* Vibrant lighter blue */
+    --accent-color-dark: #3B82F6; /* Primary accent blue */
+}
+html,
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color-primary);
+    overflow-x: hidden;
+}
+header {
+    background-color: var(--header-bg);
+    border-bottom-color: var(--header-border);
+}
+.nav-link {
+    color: var(--link-color);
+}
+.nav-link::after {
+    background-color: var(--link-hover);
+}
+.nav-link:hover {
+    color: var(--link-hover);
+}
+h1, h2, h3, h4 {
+    color: var(--text-color-primary);
+}
+p, li {
+    color: var(--text-color-secondary);
+}
+.bg-indigo-700 {
+    background-color: var(--accent-color-dark);
+}
+.text-indigo-600 {
+    color: var(--accent-color);
+}
+.hover\:bg-indigo-700:hover {
+    background-color: var(--accent-color-dark);
+}
+.bg-indigo-600 {
+    background-color: var(--accent-color);
+}
+.bg-white {
+    background-color: var(--card-bg);
+}
+.text-gray-800 {
+    color: var(--text-color-primary);
+}
+.text-gray-600 {
+    color: var(--text-color-secondary);
+}
+.text-gray-700 {
+    color: var(--text-color-secondary);
+}
+.text-gray-400 {
+    color: var(--footer-text);
+}
+.bg-gray-800 {
+    background-color: var(--footer-bg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color); /* Uses the new accent color */
+    transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.faq-question span {
+    color: var(--text-color-primary);
+}
+
+.faq-item {
+    border-left-color: var(--accent-color);
+}
+.faq-item:hover {
+    border-left-color: var(--accent-color);
+}
+
+.faq-answer {
+    color: var(--text-color-secondary);
+}
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366; /* WhatsApp green */
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Ensure it's above other elements */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.1);
+    }
+    
+    /* Ensure the button is visible in dark mode */
+    [data-theme="dark"] .whatsapp-button {
+        background-color: #128C7E; /* Darker WhatsApp green for dark mode */
+    }
+
+    @media (max-width: 768px) {
+        /* Styles for mobile devices */
+        .header .container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-links {
+            margin-top: 10px;
+            flex-direction: column;
+            text-align: center;
+        }
+        .nav-link {
+            margin: 5px 0;
+        }
+        .hero-section .container {
+            padding: 40px 20px;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+        }
+        .hero-subtitle {
+            font-size: 1rem;
+        }
+        .grid-cols-3 {
+            grid-template-columns: 1fr;
+        }
+        .grid-cols-2 {
+            grid-template-columns: 1fr;
+        }
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer-links,
+        .footer-contact {
+            margin-top: 20px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        /* Styles for tablets and small desktops */
+        .hero-title {
+            font-size: 3.5rem;
+        }
+        .grid-cols-3 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1025px) {
+        /* Styles for larger desktops */
+        .hero-title {
+            font-size: 4.5rem;
+        }
+    }
